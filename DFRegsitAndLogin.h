@@ -4,12 +4,20 @@
 //
 //  Created by qingyun on 16/11/5.
 //  Copyright © 2016年 qingyun.dafa. All rights reserved.
-//
+// 1.项目中需要提前安装afnetworing
+// 2.把leancloud 中项目的 发送验证码服务 开启
+// 3.复制 key  和id
+// 4. 将本文件拖入项目中，在需要的地方引入头文件，类名调用方法如
+// [DFRegsitAndLogin login:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum passWord:(NSString *)passWord];
 
 #import <Foundation/Foundation.h>
 
 @interface DFRegsitAndLogin : NSObject
-+(void)login:(NSString *)appID :(NSString *)appKey :(NSString *)telephoneNum :(NSString *)passWord;//登录
-+(void)sendVerificationCode:(NSString *)appKey :(NSString *)appID :(NSString *)telephone;//发送验证码
-+(void)regist:(NSString *)appID :(NSString *)appKey :(NSString *)telephoneNum :(NSString *)smsCode :(NSString *)passWord;//注册
++(void)login:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum passWord:(NSString *)passWord;//登录
+
+
++(void)sendVerificationCode:appKey(NSString *)appKey appID:(NSString *)appID telephone:(NSString *)telephone;//发送验证码
+
++(void)regist:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum smsCode:(NSString *)smsCode passWord:(NSString *)passWord;//注册
+
 @end

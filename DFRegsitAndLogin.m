@@ -11,7 +11,7 @@
 @implementation DFRegsitAndLogin
 
 
-+(void)regist:(NSString *)appID :(NSString *)appKey :(NSString *)telephoneNum :(NSString *)smsCode :(NSString *)passWord{
++(void)regist:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum smsCode:(NSString *)smsCode passWord:(NSString *)passWord{
     
     
     AFHTTPSessionManager *manager= [AFHTTPSessionManager manager];
@@ -39,7 +39,7 @@
 
 //从storybord 连线过来的button方法（发送短信验证码）
 
-+(void)sendVerificationCode:(NSString *)appKey :(NSString *)appID :(NSString *)telephone{
++(void)sendVerificationCode:appKey(NSString *)appKey appID:(NSString *)appID telephone:(NSString *)telephone{
     
     // 前提引入AFNetworking 第三方库
     AFHTTPSessionManager *manager= [AFHTTPSessionManager manager];
@@ -65,7 +65,7 @@
               NSLog(@"%@",error); }];
         }
 
-+(void)login:(NSString *)appID :(NSString *)appKey :(NSString *)telephoneNum :(NSString *)passWord {
++(void)login:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum passWord:(NSString *)passWord {
     
     AFHTTPSessionManager *manager= [AFHTTPSessionManager manager];
     // manager.requestSerializer = [AFJSONRequestSerializer serializer];
