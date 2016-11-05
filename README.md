@@ -1,11 +1,13 @@
 # LoginAndResigt
 
  1.项目中需要提前安装afnetworing
+ 
  2.把leancloud 中项目的 发送验证码服务 开启
+ 
  3.复制 key  和id
+ 
  4. 将本文件拖入项目中，在需要的地方引入头文件，类名调用方法如
-// [DFRegsitAndLogin login:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum passWord:(NSString *)passWord];
-使用前，需要将leancloud的短信验证码服务打开，将头文件引入，然后使用类名调用如调用登录方法
+ 
 [DFRegsitAndLogin login:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum passWord:(NSString *)passWord];
 
 +(void)login:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum passWord:(NSString *)passWord;//登录
