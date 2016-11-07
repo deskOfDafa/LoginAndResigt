@@ -13,5 +13,5 @@
 
 +(void)regist:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum smsCode:(NSString *)smsCode passWord:(NSString *)passWord;//注册
 
-自己封装的一个leancloud 注册登录功能， 一行代码可实现。
+自己封装的一个leancloud 注册、登录、找回密码功能， 一行代码可实现。
 

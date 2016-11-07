@@ -13,11 +13,17 @@
 #import <Foundation/Foundation.h>
 
 @interface DFRegsitAndLogin : NSObject
-+(void)login:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum passWord:(NSString *)passWord;//登录
+#pragma mark 登录使用
++(void)loginAppID:(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum passWord:(NSString *)passWord;//登录
 
+#pragma mark 注册使用
++(void)sendVerificationCodeAppID:(NSString *)appID appKey:(NSString *)appKey telephone:(NSString *)telephone;//发送验证码
 
-+(void)sendVerificationCode:appKey(NSString *)appKey appID:(NSString *)appID telephone:(NSString *)telephone;//发送验证码
++(void)registAppID:(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum smsCode:(NSString *)smsCode passWord:(NSString *)passWord;//注册
 
-+(void)regist:appID(NSString *)appID appKey:(NSString *)appKey telephoneNum:(NSString *)telephoneNum smsCode:(NSString *)smsCode passWord:(NSString *)passWord;//注册
+#pragma mark 找回密码使用
++(void)requestPasswordResetBySmsCodeAppID:(NSString *)appID appKey:(NSString *)appKey telephone:(NSString *)telephone;//申请验证码
++(void)resetPasswordAppID:(NSString *)appID appKey:(NSString *)appKey smsCode:(NSString *)smsCode NewPassWord:(NSString *)NewpassWord;//从新设置密码
+
 
 @end
